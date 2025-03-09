@@ -12,10 +12,12 @@ header {
     background: #2c3e50;
     color: white;
     padding: 50px 20px;
+    text-align: center;
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5em;
 }
 
 .btn {
@@ -26,31 +28,59 @@ header h1 {
     border-radius: 5px;
     display: inline-block;
     margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #d35400;
 }
 
 /* Sections */
 section {
     padding: 40px 20px;
     background: white;
-    margin: 20px;
+    margin: 20px auto;
     border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #333;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background: #e67e22;
+/* Expanding Section */
+.expand-btn {
+    background: #2c3e50;
     color: white;
     padding: 10px;
-    margin: 5px 0;
+    border: none;
+    cursor: pointer;
     border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.expand-btn:hover {
+    background: #e67e22;
+}
+
+.expand-content {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 5px;
+}
+
+/* Services */
+.service {
+    background: #e67e22;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: scale(1.05);
 }
 
 /* Contact Form */
