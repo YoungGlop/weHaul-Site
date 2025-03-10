@@ -83,9 +83,10 @@ header {
 }
 
 .gallery-container {
-    width: 100%;
+    width: auto;
     margin: 0 auto;
     text-align: center;
+    padding: 10px; 
 }
 
 .gallery-labels {
