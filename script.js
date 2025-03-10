@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     const gallery = document.getElementById("dynamic-gallery");
     let imageIndex = 1;
-    let maxTries = 5; // Stops after 5 consecutive missing images to prevent infinite loop
+    let maxTries = 5;
 
     function loadImages(missingCount = 0) {
         if (missingCount >= maxTries) {
             if (imageIndex === 1) {
                 gallery.innerHTML = "<p>No before-and-after images found.</p>";
             }
-            return; // Stop checking after too many missing images
+            return;
         }
 
         const beforePath = `images/before${imageIndex}.jpg`;
@@ -31,10 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         <img src="${afterPath}" onclick="openLightbox('${afterPath}')">
                     </div>
                 `;
-
                 gallery.appendChild(imgPair);
                 imageIndex++;
-                loadImages(0); // Reset missing count if images are found
+                loadImages(0);
             }
         }
 
@@ -63,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Expand/Collapse Content Sections
     const expandBtn = document.querySelector(".expand-btn");
     const expandContent = document.querySelector(".expand-content");
-
     if (expandBtn && expandContent) {
         expandBtn.addEventListener("click", function () {
             if (expandContent.style.display === "block") {
@@ -76,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Smooth Scrolling for Navigation Links
+    // Smooth Scrolling for Navigation Links (if you have a nav)
     document.querySelectorAll('nav ul li a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -86,13 +84,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Lightbox Functionality
+    // Insert the lightbox HTML
     document.body.insertAdjacentHTML('beforeend', `
         <div id="lightbox" class="lightbox">
             <span class="close" onclick="closeLightbox()">&times;</span>
             <img id="lightbox-img" src="">
         </div>
     `);
+
+    // Add a click listener to close when clicking outside the image
+    const lightbox = document.getElementById("lightbox");
+    lightbox.addEventListener("click", function(e) {
+        // If the user clicked the background (not the image or close button), close
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
 });
 
 // Open Lightbox
