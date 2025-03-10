@@ -9,7 +9,16 @@ body {
     color: #ffffff;           /* Light text for dark mode */
     text-align: center;
 }
-
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+::placeholder {
+    font-family: inherit;
+    color: #aaaaaa;
+}
 section {
     width: 100%;
     padding: 20px 0;
