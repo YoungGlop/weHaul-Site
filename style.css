@@ -93,7 +93,6 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;  /* Same 2-column layout as .gallery-pair */
     width: 100%;
-    max-width: 1000px;              /* Matches .gallery-pair max-width */
     margin: 0 auto 10px;            /* Centered horizontally */
     font-size: 1.3em;
     font-weight: bold;
@@ -115,7 +114,6 @@ header {
     gap: 20px;
     margin: 0 auto 20px;
     width: 100%;
-    max-width: 1000px; /* Center the columns */
 }
 
 .gallery-item {
