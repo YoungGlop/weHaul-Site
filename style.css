@@ -89,15 +89,16 @@ header {
 }
 
 .gallery-labels {
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    max-width: 700px;
-    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Same 2-column layout as .gallery-pair */
+    width: 100%;
+    max-width: 1000px;              /* Matches .gallery-pair max-width */
+    margin: 0 auto 10px;            /* Centered horizontally */
     font-size: 1.3em;
     font-weight: bold;
     color: #d32f2f;
     padding: 10px 0;
+    text-align: center;             /* Labels centered in each column */
 }
 
 /* 
