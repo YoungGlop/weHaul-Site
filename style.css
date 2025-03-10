@@ -145,6 +145,7 @@ header {
 #services {
     background: #1a1a1a;
     color: #ffffff;
+    margin: 0 auto;
 }
 
 .services-container {
