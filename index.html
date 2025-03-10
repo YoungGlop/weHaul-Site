@@ -50,35 +50,49 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
+   <!-- About Us Section -->
     <section id="about">
-        <h2>Meet the Team</h2>
-        <div class="about-container">
-            <img src="images/owner.jpg" alt="Owner and Family" class="owner-photo">
-            <div class="about-text">
-                <p>We Haul Junk Removal is a family-owned business dedicated to helping homeowners clear out unwanted junk quickly and affordably.</p>
-                <p>Whether you’re moving, renovating, or just tired of clutter, we’ll take care of everything—so you don’t have to.</p>
+        <div class="boxed-section">
+            <h2>Meet the Team</h2>
+            <div class="about-container">
+                <!-- Image always above text -->
+                <img src="images/owner.jpg" alt="Owner and Family" class="owner-photo">
+
+                <!-- Put text in a wrapper for better styling -->
+                <div class="about-text">
+                    <p>We Haul Junk Removal is a family-owned business dedicated to helping homeowners clear out unwanted junk quickly and affordably.</p>
+                    <p>Whether you’re moving, renovating, or just tired of clutter, we’ll take care of everything—so you don’t have to.</p>
+                </div>
             </div>
         </div>
     </section>
 
+
     <!-- Contact / Free Estimate Section -->
     <section id="contact">
-        <div class="contact-box">
+        <div class="boxed-section">
             <h2>Get a Free Estimate</h2>
             <p>Tell us what you need removed, and we’ll give you a fast, hassle-free quote.</p>
-            
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="phone" placeholder="Your Phone" required>
-                <textarea name="message" placeholder="Tell us what you need removed" required></textarea>
-                <button type="submit">Send Request</button>
-            </form>
 
-            <p class="contact-note">Prefer to call or text? Reach out now: <a href="tel:1234567890">123-456-7890</a></p>
+            <!-- A container, similar to services-container -->
+            <div class="contact-container">
+                <div class="contact-box">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="tel" name="phone" placeholder="Your Phone" required>
+                        <textarea name="message" placeholder="Tell us what you need removed" required></textarea>
+                        <button type="submit">Send Request</button>
+                    </form>
+
+                    <p class="contact-note">Prefer to call or text? Reach out now: 
+                        <a href="tel:1234567890">123-456-7890</a>
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer>
