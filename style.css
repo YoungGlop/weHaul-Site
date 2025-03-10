@@ -243,10 +243,6 @@ header {
     transition: background 0.3s, transform 0.2s;
 }
 
-.contact-box button:hover {
-    background: #b71c1c;
-    transform: scale(1.05);
-}
 
 /* ------------------
    FOOTER

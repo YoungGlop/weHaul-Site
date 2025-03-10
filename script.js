@@ -112,3 +112,46 @@ function openLightbox(imageSrc) {
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
+
+// Intercept the form submission to do AJAX + custom popups
+const form = document.getElementById('contactForm');
+if (form) {
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault(); // Stop normal form submission
+
+        // Basic HTML5 validity check
+        if (!form.checkValidity()) {
+            form.reportValidity(); 
+            return; 
+        }
+
+        // Gather form data
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Success popup
+                alert("Thank you! Your message has been sent.");
+                form.reset(); // Clear the form
+            } else {
+                // Formspree returns JSON with 'errors' on failure
+                const data = await response.json();
+                if (data.errors) {
+                    alert(data.errors.map(err => err.message).join(", "));
+                } else {
+                    alert("Oops! Something went wrong.");
+                }
+            }
+        } catch (error) {
+            alert("Oops! Unable to send your request. Please try again later.");
+        }
+    });
+}
