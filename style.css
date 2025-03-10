@@ -1,92 +1,183 @@
-/* General Styles */
+/* ------------------
+   GLOBAL STYLES
+------------------ */
 body {
-    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    font-family: 'Raleway', sans-serif;
+    background-color: #1a1a1a; /* Dark background for body */
+    color: #ffffff;            /* Light text for dark mode */
     text-align: center;
 }
 
-/* Header */
-header {
-    background: #2c3e50;
-    color: white;
+section {
+    width: 100%;
     padding: 60px 20px;
+    text-align: center;
 }
 
-.company-name {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #e67e22;
+/* ------------------
+   HEADER
+------------------ */
+header {
+    background: #ffffff; /* White header so the logo pops */
+    color: #000000;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.company-logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 100%;
+    width: 350px; /* Adjust as needed */
+    height: auto;
 }
 
 .tagline {
-    font-size: 1.2em;
+    font-size: 1.3em;
     max-width: 600px;
     margin: auto;
+    color: #444444; /* Slightly darker text for tagline */
 }
 
-/* Buttons */
+/* ------------------
+   BUTTONS
+------------------ */
 .btn {
-    background: #e67e22;
-    color: white;
+    background: #d32f2f; /* Solid Red */
+    color: #ffffff;
     padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
     margin: 10px;
-    transition: background 0.3s;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .btn:hover {
-    background: #d35400;
+    background: #b71c1c; /* Darker Red on hover */
+    transform: scale(1.05);
 }
 
-/* Gallery */
+/* ------------------
+   BOXED SECTIONS
+   (Now with a gradient background)
+------------------ */
+.boxed-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    /* Gradient from dark gray to black */
+    background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------
+   GALLERY SECTION
+------------------ */
 #gallery {
-    padding: 40px 20px;
-    background: white;
+    background: #1a1a1a; /* Dark background behind .boxed-section */
 }
 
 .gallery-container {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+
+.gallery-labels {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    justify-content: space-between;
+    max-width: 700px;
+    margin: 0 auto 10px auto;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #d32f2f; /* Red labels */
+    padding: 10px 0;
+}
+
+.gallery-label {
+    flex: 1;
+    text-align: center;
 }
 
 .gallery-pair {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    max-width: 700px;
-    flex-wrap: wrap;
     align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 .gallery-item {
-    text-align: center;
-}
-
-.gallery-item h3 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    color: #333;
+    flex: 1;
+    max-width: 45%;
+    position: relative;
+    overflow: hidden;
 }
 
 .gallery-item img {
-    width: 300px;
-    height: auto;
+    width: 100%;
+    max-width: 420px; /* Slightly larger for a modern look */
+    height: 260px;
+    object-fit: cover;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
 }
 
 .gallery-item img:hover {
     transform: scale(1.05);
+    filter: brightness(85%);
 }
 
-/* About Us */
+/* ------------------
+   SERVICES SECTION
+------------------ */
+#services {
+    background: #1a1a1a; /* Dark body background */
+    color: #ffffff;
+}
+
+/* Each .boxed-section is already a gradient from .boxed-section rules */
+
+/* The service sub-box is red for a bold contrast */
+.service {
+    background: #d32f2f; /* Solid Red */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* ------------------
+   ABOUT US SECTION
+------------------ */
+#about {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+/* .boxed-section is gradient, no extra needed here */
+
 .about-container {
     display: flex;
     flex-wrap: wrap;
@@ -101,51 +192,127 @@ header {
 .owner-photo {
     width: 300px;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
+/* ------------------
+   CONTACT SECTION
+------------------ */
+#contact {
+    background: #1a1a1a;
+}
+
+.contact-box {
+    background: #3c3c3c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
 }
 
 input, textarea {
     margin: 10px 0;
-    padding: 10px;
+    padding: 12px;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #555555;
     border-radius: 5px;
+    font-size: 1rem;
+    background: #2c2c2c;
+    color: #ffffff;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaaaaa;
 }
 
 button {
-    background: #2c3e50;
+    background: #d32f2f; /* Red */
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background: #e67e22;
+    background: #b71c1c;
+    transform: scale(1.05);
 }
 
-/* Footer */
+/* ------------------
+   FOOTER
+------------------ */
 footer {
-    background: #2c3e50;
-    color: white;
+    background: #000000;
+    color: #ffffff;
     padding: 20px;
-    margin-top: 20px;
+    text-align: center;
 }
 
-/* Mobile-Friendly */
+/* ------------------
+   LIGHTBOX
+------------------ */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+/* ------------------
+   MOBILE OPTIMIZATION
+------------------ */
 @media (max-width: 768px) {
+    .company-logo {
+        width: 80%;
+    }
+
+    .gallery-labels {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
     .gallery-pair {
         flex-direction: column;
     }
-    .gallery-item img {
-        width: 90%;
+
+    .gallery-item {
+        max-width: 100%;
+    }
+
+    .services-container {
+        flex-direction: column;
+    }
+
+    .service {
+        max-width: 100%;
     }
 }

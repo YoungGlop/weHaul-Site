@@ -12,79 +12,41 @@
 
     <!-- Header / Hero Section -->
     <header>
-        <h1><br> <span class="company-name">WEHAUL JUNK REMOVAL</span></h1>
+        <!-- Logo Replaces Text-Based Title -->
+        <img src="images/CompanyLogo.png" alt="WeHaul Junk Removal Logo" class="company-logo">
         <p class="tagline">Fast, Affordable, & Hassle-Free Residential Junk Removal</p>
         <div class="buttons">
-            <a href="tel:1234567890" class="btn">📞 CALL NOW</a>
-            <a href="#contact" class="btn">📅 GET A QUOTE</a>
+            <a href="tel:1234567890" class="btn">CALL OR TEXT</a>
+            <a href="#contact" class="btn">GET A QUOTE</a>
         </div>
     </header>
 
     <!-- Before & After Gallery -->
     <section id="gallery">
-        <h2>Before & After</h2>
-        <p>See the difference our junk removal services make!</p>
-        <div class="gallery-container">
-            <!-- Job 1 -->
-            <div class="gallery-pair">
-                <div class="gallery-item">
-                    <h3>Before</h3>
-                    <img src="images/before1.jpg" alt="Before">
+        <div class="boxed-section">
+            <h2>See the Difference Our Junk Removal Services Make!</h2>
+            
+            <div class="gallery-container">
+                <!-- Labels positioned above each column -->
+                <div class="gallery-labels">
+                    <div class="gallery-label">Before</div>
+                    <div class="gallery-label">After</div>
                 </div>
-                <div class="gallery-item">
-                    <h3>After</h3>
-                    <img src="images/after1.jpg" alt="After">
-                </div>
-            </div>
 
-            <!-- Job 2 -->
-            <div class="gallery-pair">
-                <div class="gallery-item">
-                    <h3>Before</h3>
-                    <img src="images/before2.jpg" alt="Before">
-                </div>
-                <div class="gallery-item">
-                    <h3>After</h3>
-                    <img src="images/after2.jpg" alt="After">
-                </div>
-            </div>
-
-            <!-- Job 3 -->
-            <div class="gallery-pair">
-                <div class="gallery-item">
-                    <h3>Before</h3>
-                    <img src="images/before3.jpg" alt="Before">
-                </div>
-                <div class="gallery-item">
-                    <h3>After</h3>
-                    <img src="images/after3.jpg" alt="After">
-                </div>
+                <div id="dynamic-gallery"></div>
             </div>
         </div>
     </section>
 
-
     <!-- Residential Services Section -->
     <section id="services">
-        <h2>Residential Junk Removal</h2>
+        <h2>Our Junk Removal Services</h2>
         <p>We handle all your home junk removal needs—whether it’s old furniture, broken appliances, or general clutter.</p>
         <div class="services-container">
-            <div class="service">
-                <h3>Household Junk Removal</h3>
-                <p>We remove unwanted items from garages, basements, and attics. No job is too big or small!</p>
-            </div>
-            <div class="service">
-                <h3>Appliance Hauling</h3>
-                <p>We haul away refrigerators, stoves, washing machines, dryers, and more—straight to the dump.</p>
-            </div>
-            <div class="service">
-                <h3>Furniture Removal</h3>
-                <p>Got an old couch, mattress, or dresser? We'll take care of it for you.</p>
-            </div>
-            <div class="service">
-                <h3>Yard Waste & Debris Cleanup</h3>
-                <p>Branches, old fencing, bagged leaves—if it’s in your yard and you don’t want it, we’ll haul it away.</p>
-            </div>
+            <div class="service"><h3>Household Junk Removal</h3><p>We remove unwanted items from garages, basements, and attics.</p></div>
+            <div class="service"><h3>Appliance Hauling</h3><p>We haul away refrigerators, stoves, washing machines, dryers, and more.</p></div>
+            <div class="service"><h3>Furniture Removal</h3><p>Got an old couch, mattress, or dresser? We'll take care of it for you.</p></div>
+            <div class="service"><h3>Yard Waste & Debris Cleanup</h3><p>Branches, old fencing, bagged leaves—if it’s in your yard and you don’t want it, we’ll haul it away.</p></div>
         </div>
     </section>
 
@@ -92,7 +54,7 @@
     <section id="about">
         <h2>Meet the Team</h2>
         <div class="about-container">
-            <img src="owner.jpg" alt="Owner and Family" class="owner-photo">
+            <img src="images/owner.jpg" alt="Owner and Family" class="owner-photo">
             <div class="about-text">
                 <p>We Haul Junk Removal is a family-owned business dedicated to helping homeowners clear out unwanted junk quickly and affordably.</p>
                 <p>Whether you’re moving, renovating, or just tired of clutter, we’ll take care of everything—so you don’t have to.</p>
@@ -100,23 +62,34 @@
         </div>
     </section>
 
-    <!-- Contact Form -->
+    <!-- Contact / Free Estimate Section -->
     <section id="contact">
-        <h2>Get a Free Estimate</h2>
-        <p>Tell us what you need removed, and we’ll give you a fast, hassle-free quote.</p>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Your Phone" required>
-            <textarea name="message" placeholder="Tell us what you need removed" required></textarea>
-            <button type="submit">Send Request</button>
-        </form>
+        <div class="contact-box">
+            <h2>Get a Free Estimate</h2>
+            <p>Tell us what you need removed, and we’ll give you a fast, hassle-free quote.</p>
+            
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone" required>
+                <textarea name="message" placeholder="Tell us what you need removed" required></textarea>
+                <button type="submit">Send Request</button>
+            </form>
+
+            <p class="contact-note">Prefer to call or text? Reach out now: <a href="tel:1234567890">123-456-7890</a></p>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 We Haul Junk Removal | Call us: 123-456-7890</p>
+        <p>© 2025 We Haul Junk Removal | Call or Text: 123-456-7890</p>
     </footer>
+
+    <!-- Lightbox Modal for Image Viewing -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="">
+    </div>
 
 </body>
 </html>
